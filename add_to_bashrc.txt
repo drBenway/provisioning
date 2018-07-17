@@ -1,0 +1,10 @@
+# put custom functions in the .mysettings file
+function settings(){
+    target_folder=~/.mySettings/
+    for i in `find $target_folder -type f`;
+    do
+        . $i
+    done;
+}
+##don't forget to execute the function
+settings
